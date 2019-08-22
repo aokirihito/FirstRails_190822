@@ -1,0 +1,6 @@
+div style="text-align: center;"
+	= form_tag import_path, multipart: true do
+		div style="display: flex; padding: 50px; justify-content: center;"
+			= select('', :level, options_for_select([['初級', 1], ['中級', 2], ['上級', 3], ['最上級', 4],]), {}, {style: "margin-right: 20px;"})
+			= file_field_tag :file
+			= submit_tag "インポート"

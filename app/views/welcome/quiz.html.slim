@@ -1,0 +1,77 @@
+div
+  / .pc
+  /   header
+  /     .top-menu
+  /       div
+  /         = link_to image_tag("bt_home_pc.png"), root_path
+  /       div
+  /         = link_to image_tag("bt_01.png"), topic_url
+  /       div
+  /         = link_to image_tag("bt_02.png"), root_path
+  /       div
+  /         = link_to image_tag("bt_03.png"), quiz_url
+  /       div
+  /         = link_to image_tag("bt_04.png"), root_path
+  /       div
+  /         = link_to image_tag("bt_05.png"), root_path
+  /     p.tag-name
+  /       | クイズ
+  / .sp
+  /   .header
+  /     = link_to image_tag("bt_home.png"), root_path
+  /     = link_to image_tag("bt_01.png"), topic_url
+  /     = link_to image_tag("bt_02.png"), root_path
+  /     = link_to image_tag("bt_03.png"), quiz_url
+  /     = link_to image_tag("bt_04.png"), root_path
+  /     = link_to image_tag("bt_05.png"), root_path
+  article
+    - unless @mark.nil?
+      .mark
+        div
+          - mark_img_name = "#{@mark}.jpg"
+          - mark_img_url = image_url(mark_img_name)
+          = image_tag(mark_img_url)
+          .prettySocial data-description="クイズテスト：#{@mark}点" data-media="#{mark_img_url}" data-type="twitter" data-url="#{request.original_url}" 
+            = image_tag(image_url("share.png"))
+
+        p.evalution もう少しエイケンのことを知ってくれるとうれしいな！
+      
+    - else
+      - unless @option_id.nil?
+        .answer
+          div
+            = image_tag( @correct ? "a_right_title.jpg" : "a_wrong_title.jpg")
+            p.description 定解はこちら
+          div
+            p = @answer
+          div
+            span
+              = @prev_quiz.quiz
+              br
+              = @prev_quiz.description
+            = image_tag("01q.jpg")
+          p style="text-align: right; font-size: 30px; "
+            = link_to '次へ', quiz_path
+          
+      - else
+        p = @quiz.level_text
+        .quiz
+          div
+            = image_tag("q_title.jpg")
+            .quiz-title
+              p = @quiz.work
+              p についての問題だよ！
+          div
+            span
+              = @quiz.quiz
+              br
+              = @quiz.description
+            = image_tag("01q.jpg")
+          div
+            - @quiz.options.each do |option|
+              p
+                = link_to "・#{option.value}", quiz_path(option_id: option.id)
+    / p.privacy-text
+    /   | サイト内素材の無断使用・転用は禁じます。
+    /   br/
+    /   | ©小島 功・エイケン　©光プロダクション・エイケン　©平井和正・桑田二郎／TBS　©TBS　©エイケン　©白土三平©エイケン　©長谷川町子美術館   ©横山隆一・エイケン　©田河水泡／講談社・エイケン　©佐藤さとる・村上勉／講談社・エイケン　©1976 雁屋哲・エイケン　©フジテレビ・エイケン　©ちばあきお・エイケン　©畑 正憲・エイケン　©美内すずえ／エイケン　©サトウサンペイ・フジテレビ・エイケン　©村上もとか／小学館・エイケン　©みつはしちかこ・エイケン　©アーネストTシートン・エイケン　©植田まさし／植田プロダクション・エイケン　©うえやまとち／講談社・エイケン　©布浦　翼／講談社・TBS・エイケン　©松竹・TBS・エイケン　©BSフジ・エイケン　©TBS・エイケン　©久里洋二・TBS・エイケン　©2005 ちばあきお・エイケン／プレイボール製作委員会　©光プロダクション・フジテレビ・エイケン　©いがらしみきお／竹書房・フジテレビ・エイケン

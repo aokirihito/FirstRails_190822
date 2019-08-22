@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'ShinGoPro-M';
+  src:url(../fonts/A-OTF-ShinGoPro-Medium.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ShinGoPro-DeBold';
+  src:url(../fonts/A-OTF-SHINGOPRO-DEBOLD_0.OTF);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ShinGoPro-Light';
+  src:url(../fonts/A-OTF-SHINGOPRO-LIGHT_0.OTF);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ShinGoPro-Bold';
+  src:url(../fonts/A-OTF-SHINGOPRO-BOLD_0.OTF);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ShinGoPro-Heavy';
+  src:url(../fonts/A-OTF-SHINGOPRO-HEAVY_0.OTF);
+  font-weight: normal;
+  font-style: normal;
+}

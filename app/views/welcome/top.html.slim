@@ -1,0 +1,99 @@
+div
+  - unless @is_mobile
+    .pc
+      header
+        .top-menu
+          div
+            = link_to image_tag("bt_home_pc.png"), root_path
+          div
+            = link_to image_tag("bt_01.png"), topic_url
+          div
+            = link_to image_tag("bt_02.png"), root_path
+          div
+            = link_to image_tag("bt_03.png"), quiz_url
+          div
+            = link_to image_tag("bt_04.png"), root_path
+          div
+            = link_to image_tag("bt_05.png"), root_path
+        = link_to image_tag("uranai_pc.png"), root_path, class: 'urainai'
+      article
+        .topics
+          = link_to image_tag("topix_title.png"), root_path
+          div
+            - @topics.each do |topic|
+              div
+                span = topic.date.strftime("%Y.%m.%d")
+                = link_to topic.title, topic.link
+        .chara
+          = image_tag("chara.png")
+        .banners
+          = image_tag("banner01.png")
+          = image_tag("banner01.png")
+          = image_tag("banner01.png")
+          = image_tag("banner01.png")
+        p.privacy-text
+          | サイト内素材の無断使用・転用は禁じます。
+          br/
+          | ©小島 功・エイケン　©光プロダクション・エイケン　©平井和正・桑田二郎／TBS　©TBS　©エイケン　©白土三平©エイケン　©長谷川町子美術館   ©横山隆一・エイケン　©田河水泡／講談社・エイケン　©佐藤さとる・村上勉／講談社・エイケン　©1976 雁屋哲・エイケン　©フジテレビ・エイケン　©ちばあきお・エイケン　©畑 正憲・エイケン　©美内すずえ／エイケン　©サトウサンペイ・フジテレビ・エイケン　©村上もとか／小学館・エイケン　©みつはしちかこ・エイケン　©アーネストTシートン・エイケン　©植田まさし／植田プロダクション・エイケン　©うえやまとち／講談社・エイケン　©布浦　翼／講談社・TBS・エイケン　©松竹・TBS・エイケン　©BSフジ・エイケン　©TBS・エイケン　©久里洋二・TBS・エイケン　©2005 ちばあきお・エイケン／プレイボール製作委員会　©光プロダクション・フジテレビ・エイケン　©いがらしみきお／竹書房・フジテレビ・エイケン
+  - else
+    .sp
+      .header
+        = link_to image_tag("bt_home.png"), root_path
+        = link_to image_tag("bt_01.png"), topic_url
+        = link_to image_tag("bt_02.png"), root_path
+        = link_to image_tag("bt_03.png"), quiz_url
+        = link_to image_tag("bt_04.png"), root_path
+        = link_to image_tag("bt_05.png"), root_path
+      div
+        = image_tag("top_img_sp.png", style: "width: 100%;")
+      .main
+        .top-part
+          div
+            = image_tag("uranai.png")
+          div
+            = image_tag("chara.png")
+        .top-part.title
+          div
+            = image_tag("navbar_01.png")
+          div
+            = image_tag("navbar_02.png")
+        .top-part.title
+          div
+            = image_tag("navbar_03.png")
+          div
+            = image_tag("navbar_04.png")
+        .list-header
+          span トピックス
+          span &gt;&gt;もっと見る
+        .list
+          .item
+            div
+              = image_tag("item.png")
+            div
+              p 2019.03.05
+              p ブログタイトル
+              p 本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用
+              span more
+          .item
+            div
+              = image_tag("item.png")
+            div
+              p 2019.03.05
+              p ブログタイトル
+              p 本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用
+              span more
+          .item
+            div
+              = image_tag("item.png")
+            div
+              p 2019.03.05
+              p ブログタイトル
+              p 本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用
+              span more
+        .banners
+          = image_tag("banner01.png")
+          = image_tag("banner01.png")
+        p.privacy-text
+          | サイト内素材の無断使用・転用は禁じます。
+          br/
+          | ©小島 功・エイケン　©光プロダクション・エイケン　©平井和正・桑田二郎／TBS　©TBS　©エイケン　©白土三平©エイケン　©長谷川町子美術館   ©横山隆一・エイケン　©田河水泡／講談社・エイケン　©佐藤さとる・村上勉／講談社・エイケン　©1976 雁屋哲・エイケン　©フジテレビ・エイケン　©ちばあきお・エイケン　©畑 正憲・エイケン　©美内すずえ／エイケン　©サトウサンペイ・フジテレビ・エイケン　©村上もとか／小学館・エイケン　©みつはしちかこ・エイケン　©アーネストTシートン・エイケン　©植田まさし／植田プロダクション・エイケン　©うえやまとち／講談社・エイケン　©布浦　翼／講談社・TBS・エイケン　©松竹・TBS・エイケン　©BSフジ・エイケン　©TBS・エイケン　©久里洋二・TBS・エイケン　©2005 ちばあきお・エイケン／プレイボール製作委員会　©光プロダクション・フジテレビ・エイケン　©いがらしみきお／竹書房・フジテレビ・エイケン
